@@ -1,5 +1,5 @@
 import styles from './Search.module.scss';
-// import { CiSearch } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 
 function Search() {
 
@@ -12,7 +12,7 @@ function Search() {
             
             <div className={styles.searchBtn}>
                 <input type="text" placeholder='Search'/>
-                {/* <button><CiSearch /></button> */}
+                <button><CiSearch /></button>
             </div>
         </div>
     )
