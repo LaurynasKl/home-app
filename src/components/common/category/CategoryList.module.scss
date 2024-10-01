@@ -1,0 +1,29 @@
+.categories{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // background-color: red;
+}
+.btn{
+    margin: 60px 10px;
+    padding: 20px 0;
+    width: 12%;
+    font-size: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e3dbfa;
+    cursor: pointer;
+    &:hover{
+        background-color: #f2eefd;
+    }
+
+    .icon{
+        color: orange;
+        font-size: 50px;
+    }
+    .name{
+        font-size: 18px;
+        color: #9977ef;
+        font-weight: bold;
+    }
+}
