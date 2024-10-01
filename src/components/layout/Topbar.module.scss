@@ -1,0 +1,36 @@
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 60px;
+    align-items: center;
+  }
+  
+  .leftSide {
+    display: flex;
+    align-items: center;
+  
+    h1 {
+      font-size: 27px;
+      margin: 0 10px;
+    }
+  }
+  .link {
+    color: black;
+    margin: 0 20px;
+    font-size: 20px;
+  }
+  
+  .rightSide{
+      
+      button{
+          background-color: #8056eb;
+          color: white;
+          height: 50px;
+          padding: 0 30px;
+          margin-right: 55px;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+  }
