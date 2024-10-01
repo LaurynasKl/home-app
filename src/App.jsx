@@ -1,6 +1,6 @@
 import './App.css'
 import CategoryList from './components/common/category/CategoryList'
-import Search from './components/common/Search'
+import Hero from './components/common/category/Hero'
 import TopBar from './components/layout/Topbar'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <TopBar />
-    <Search />
+    <Hero />
     <CategoryList />
     </>
   )
