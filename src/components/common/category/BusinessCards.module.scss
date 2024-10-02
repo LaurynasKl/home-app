@@ -1,0 +1,65 @@
+.businessCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+    width: 250px;
+    padding: 16px 20px;
+    position: relative;
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    }
+    img {
+      width: 100%;
+      height: 40%;
+    }
+  }
+  .likeBtn{
+    background-color: transparent;
+    color: white;
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border: none;
+    &:hover {
+      color: red;
+    }
+  }
+  
+  
+  
+  .category {
+    background-color: #e3dbfa;
+    color: #9977ef;
+    display: inline-block;
+    padding: 7px;
+    margin: 10px 0;
+    border-radius: 40px;
+  }
+  .company {
+    margin-bottom: 5px;
+  }
+  .name {
+    color: #9977ef;
+  }
+  .place {
+    margin: 5px 0;
+  }
+  
+  .btn {
+    background-color: #8056eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
