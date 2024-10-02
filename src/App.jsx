@@ -7,12 +7,14 @@ import Services from './pages/Services';
 import Login from './pages/Login';
 import Error from './pages/Error';
 import { SiteLayout } from './components/layout/SiteLayout';
+import VerticalCategoryList from './components/common/category/VerticalCategoryList';
+import { UserProvider } from './contexts/UserContext';
 
 const router = createBrowserRouter([
   {
-    path: "/", 
-    element: <SiteLayout />, 
-    errorElement: <Error />, 
+    path: "/",
+    element: <SiteLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: routes.home,
@@ -30,20 +32,24 @@ const router = createBrowserRouter([
         path: routes.login,
         element: <Login />,
       },
-      // {
-      //   path: routes.searchCategory,
-      //   element: <SelectedCategory />,
-      // },
+      {
+        path: routes.searchCategory,
+        element: <VerticalCategoryList />,
+      },
     ]
   }
-  
+
+
 ]);
+
 
 function App() {
 
   return (
     <>
-    <RouterProvider router={router} />
+      <UserProvider >
+        <RouterProvider router={router} />
+      </UserProvider >
     </>
   )
 }

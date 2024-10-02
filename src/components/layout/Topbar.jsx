@@ -2,8 +2,12 @@ import style from './TopBar.module.scss';
 import logo from '../../assets/logo.png';
 import routes from '../router/Router';
 import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContext';
+import Avatar from '../common/Avatar';
 
 function TopBar() {
+    const { user } = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -33,11 +37,15 @@ function TopBar() {
                     ))}
                 </nav>
             </div>
-            
+
             <div className={style.rightSide}>
-                <button onClick={() => navigate(routes.login)}> Login / Sign Up </button>
+                {user ? (
+                        <Avatar>{user.email[0]}</Avatar>
+                ) :
+                    <button onClick={() => navigate(routes.login)}> Login / Sign Up </button>
+                }
             </div>
-        </header>
+        </header >
 
     )
 }
