@@ -5,12 +5,13 @@ import { GiLargePaintBrush } from "react-icons/gi";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { MdOutlinePlumbing } from "react-icons/md";
 import { MdElectricBolt } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
-import routes from '../../router/Router';
+// import { useNavigate } from 'react-router-dom';
+// import routes from '../../router/Router';
+import CategoryCard from './CategoryCard';
 
 function CategoryList() {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const categories = [
         { name: "Cleaning", icon: <GiVacuumCleaner />, color: 'purple' },
@@ -26,10 +27,7 @@ function CategoryList() {
         <div className={style.categories}>
 
             {categories.map((category) => (
-                <button key={category.name} className={style.btn} onClick={() => navigate(routes.searchCategory.replace(':category', category.name))}>
-                    <div className={style.icon} style={{ color: category.color }} > {category.icon}  </div>
-                    <div className={style.name}> {category.name}</div>
-                </button>
+                <CategoryCard key={category.name} category={category}/>
             ))}
 
         </div >
