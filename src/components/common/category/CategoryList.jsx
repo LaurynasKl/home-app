@@ -30,7 +30,7 @@ function CategoryList() {
 
 
     return (
-        <div className={style.Categories}>
+        <div className={style.categories}>
             {Categories.map((category) => (
                 <CategoryCard onclick={handleNavigate} key={category.name} category={category}/>
             ))}
